@@ -22,14 +22,18 @@ export default {
       // Click Event
       const updateValue = () => {
         console.log("Click");
-        console.log(inputVal.value);
+        // console.log(inputVal.value);
+
+        // data Check
+        alert('data=' + inputVal.value);
       }
 
       return {
         updateValue,
         inputVal,
       }
-  }
+  }// setup
+
 }
 </script>
 
