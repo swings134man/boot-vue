@@ -28,6 +28,7 @@ export default {
   },
 
   // setup - 셋업안에 메서드, 변수는 자동으로 리렌더링 되지 않는다.
+  // composition api 공부 후 -> setup() <-> data() 효율적인것 찾기
   setup() {
 
   },//setup
