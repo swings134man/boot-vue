@@ -1,5 +1,7 @@
 <template>
   <div class="app">
+  <!--  제목: 사이트명(?)  -->
+  <Header/>
   <!--  네비게이션  -->
     <nav>
       <router-link to="/">home</router-link> |
@@ -14,7 +16,10 @@
 </template>
 
 <script>
-
+import Header from "@/common/comp/Header";
+export default {
+  components: {Header}
+}
 </script>
 
 <style>
