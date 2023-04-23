@@ -6,9 +6,12 @@ import HomePage from "@/components/HomePage";
 import AlonePage from "@/components/AlonePage";
 import DataBinding from "@/components/DataBinding";
 import AxiosConServer from "@/components/AxiosConServer";
+import HomeModal from "@/components/modal/HomeModal";
 
 const routes = [ //path 별 component 추가
         {path: "/", name:'HomePage', component: HomePage},
+        {path: "/modal/:id", name:'HomeModal', component: HomeModal},
+        // {path: "/modal", name:'HomeModal', component: HomeModal, props: true},
         {path: "/hello", name:'HelloWorld', component: HelloWorld},
         {path: '/error', name:'ErrorPage', component: ErrorPage},
         {path: '/test', name:'PracticePage', component: PracticePage},
