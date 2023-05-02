@@ -9,6 +9,7 @@
       <router-link to="alone">Test(alone)</router-link> |
       <router-link to="data">Data-Bind</router-link> |
       <router-link to="server">Server-Get-Data(Click)</router-link> |
+      <router-link to="sum">Sum-Table(Click)</router-link> |
 <!--      <router-link to="server/load">Server-Get-Data(페이지 진입시)</router-link> |-->
     </nav>
     <router-view/>

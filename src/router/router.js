@@ -7,6 +7,7 @@ import AlonePage from "@/components/AlonePage";
 import DataBinding from "@/components/DataBinding";
 import AxiosConServer from "@/components/AxiosConServer";
 import HomeModal from "@/components/modal/HomeModal";
+import SumTestPage from "@/components/pages/SumTestPage";
 
 const routes = [ //path 별 component 추가
         {path: "/", name:'HomePage', component: HomePage},
@@ -17,6 +18,7 @@ const routes = [ //path 별 component 추가
         {path: '/test', name:'PracticePage', component: PracticePage},
         {path: '/alone', name:'AlonePage', component: AlonePage},
         {path: '/data', name:'DataBinding', component: DataBinding},
+        {path: '/sum', name:'SumTest', component: SumTestPage},
         {path: '/server', name:'AxiosConServer', component: AxiosConServer},
     ];
 
