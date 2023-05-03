@@ -8,6 +8,7 @@ import DataBinding from "@/components/DataBinding";
 import AxiosConServer from "@/components/AxiosConServer";
 import HomeModal from "@/components/modal/HomeModal";
 import SumTestPage from "@/components/pages/SumTestPage";
+import ElPlusTable from "@/components/pages/ElPlusTable";
 
 const routes = [ //path 별 component 추가
         {path: "/", name:'HomePage', component: HomePage},
