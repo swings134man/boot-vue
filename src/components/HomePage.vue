@@ -2,6 +2,19 @@
   <div class="example-modal-window">
     <div>
       <h1>Home page</h1>
+      <br>
+    </div>
+
+    <div>
+      <h4>Connection Browser Info</h4>
+        접속 기기 종류: {{deviceInfo ? '모바일' : 'PC'}} <br>
+        브라우저명: {{ browserInfo.name }} <br>
+        브라우저 코드명: {{ browserInfo.code }} <br>
+        플랫폼 정보: {{ browserInfo.platform }} <br>
+        사용자 정보: {{ browserInfo.userInfo }} <br>
+        브라우저 버전: {{ browserInfo.version }} <br>
+
+      <br><br>
     </div>
 
     <div id="body home">
@@ -31,6 +44,7 @@
 
 <script>
 import TestModal from "@/components/modal/TestModal";
+import {reactive} from "vue";
 
 export default {
   // name: "HomePage",
@@ -45,10 +59,29 @@ export default {
         ],
       modal: false,
       message: '',
+      browserInfo: reactive({
+        name: '',
+        code: '',
+        platform: '',
+        userInfo: '',
+        version: '',
+      }),
+      deviceInfo: ''
 
     }
   },//data
+
+  mounted() {
+    this.init();
+  },
+
   methods: {
+
+    init() {
+      this.isMobile();
+      this.checkBrowser();
+    },
+
     clickList() {
       //Modal 창으로 설계 했으나, 현재는 페이지 이동 -> with 파라미터
         this.$router.push('/modal/'+'test');
@@ -69,6 +102,30 @@ export default {
       }
     },
 
+    // Web Browser 확인
+    checkBrowser() {
+      this.browserInfo.name = navigator.appName;
+      this.browserInfo.code = navigator.appCodeName;
+      this.browserInfo.platform = navigator.platform;
+      this.browserInfo.userInfo = navigator.userAgent;
+      this.browserInfo.version = navigator.appVersion;
+
+    },
+
+    // Mobile 인지 확인
+    isMobile() {
+      const info = navigator.userAgent;
+      var flag = false;
+
+      if( info.indexOf("iPhone") > -1
+          || info.indexOf("Android") > -1
+          || info.indexOf("iPad") > -1
+          || info.indexOf("iPod") > -1
+      ) {
+        flag = true;
+      }
+      this.deviceInfo = flag;
+    }
   },//mehtods
 
 
