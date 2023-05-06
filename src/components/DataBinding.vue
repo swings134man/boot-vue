@@ -3,7 +3,7 @@
       <ul>
         <li v-for="(id, index) in data" :key="id">
           <!--    index = for문의 각객체에 대한 식별값.      -->
-          {{ id.id }} - {{ id.name }} -> {{index}}
+          {{ id.id }} - {{ filterdCoumn(id.name) }} -> {{index}}
         </li>
       </ul>
   </div>
@@ -32,7 +32,13 @@ export default {
      return {
         data
      } //return
-  }//setup
+  },//setup
+
+  methods: {
+    filterdCoumn(name) {
+      return name === 'oh' ? 'Filtering~' : name;
+    },
+  }
 
 }//defalut
 </script>
