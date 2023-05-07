@@ -1,11 +1,17 @@
 <template>
-  <div></div>
+  <div>
+    <button @click="callMsg">Click Me!</button>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "ManyTableTest"
-}
+<script setup>
+
+  const message = 'Test!';
+
+  const callMsg = () => {
+    alert(message);
+  }
+
 </script>
 
 <style scoped>

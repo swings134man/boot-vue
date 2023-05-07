@@ -20,6 +20,7 @@ const routes = [ //path 별 component 추가
         {path: '/alone', name:'AlonePage', component: AlonePage},
         {path: '/data', name:'DataBinding', component: DataBinding},
         {path: '/sum', name:'SumTest', component: SumTestPage},
+        {path: '/manyTable', name:'ManyTable', component: () => import("@/components/pages/ManyTableTest.vue")},
         {path: '/server', name:'AxiosConServer', component: AxiosConServer},
     ];
 
