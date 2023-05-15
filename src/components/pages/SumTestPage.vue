@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="showModal === false">
     <table>
       <thead>
         <th>Test Data 1</th>
@@ -16,19 +16,28 @@
       </tbody>
     </table>
   </div>
+
+  <br>
+  <div>
+    <h3>Click To Make a Modal with props</h3>
+    <button @click="showModal = true">Click To Modal!</button>
+    <SumPageModal v-if="showModal" v-bind:sum-res="sumall" @close="showModal = false"/>
+  </div>
 </template>
 
 <script>
 import {ref} from "vue";
+import SumPageModal from "@/components/modal/SumPageModal";
 
 export default {
   name: "SumTestPage",
-
+  components: {SumPageModal},
   data() {
     return {
       first: ref(''),
       second: ref(''),
-      sumRes: ''
+      sumRes: '',
+      showModal: false
     }
   },
 
@@ -37,6 +46,12 @@ export default {
       return this.first + this.second;
     }
   },
+
+  methods: {
+    clickModal() {
+
+    }
+  }
 }
 </script>
 
