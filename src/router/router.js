@@ -9,6 +9,7 @@ import AxiosConServer from "@/components/AxiosConServer";
 import HomeModal from "@/components/modal/HomeModal";
 import SumTestPage from "@/components/pages/SumTestPage";
 import ElPlusTable from "@/components/pages/ElPlusTable";
+import MapTestPage from "@/components/pages/MapTestPage";
 
 const routes = [ //path 별 component 추가
         {path: "/", name:'HomePage', component: HomePage},
@@ -22,6 +23,7 @@ const routes = [ //path 별 component 추가
         {path: '/sum', name:'SumTest', component: SumTestPage},
         {path: '/manyTable', name:'ManyTable', component: () => import("@/components/pages/ManyTableTest.vue")},
         {path: '/server', name:'AxiosConServer', component: AxiosConServer},
+        {path: '/mapTest', name:'MapTestPage', component: MapTestPage},
     ];
 
 const router = createRouter({
