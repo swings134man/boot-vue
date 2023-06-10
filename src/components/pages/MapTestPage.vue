@@ -98,6 +98,11 @@ const search = () => {
 
 }
 
+// dayJs add 이후 
+const convertDate = (date) => {
+  // 현재 데이트 기반으로 가져오기.
+}
+
 </script>
 
 <style scoped>
