@@ -39,12 +39,18 @@
             </template>
         </TestModal>
     </div>
+    <hr/>
+    <!--  타입스크립트 TEST  -->
+    <div>
+
+    </div>
   </div>
 </template>
 
 <script>
 import TestModal from "@/components/modal/TestModal";
 import {reactive} from "vue";
+
 
 export default {
   // name: "HomePage",
