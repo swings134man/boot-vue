@@ -15,7 +15,9 @@
       <details>
         <summary>연습용 페이지들</summary>
           <ul>
+              <li><router-link to="elTest">ElTest</router-link></li>
               <li><router-link to="mapTest">MapTest</router-link></li>
+              <li><router-link to="dayJsTest">dayJs Test</router-link></li>
           </ul>
       </details>
     </nav>
