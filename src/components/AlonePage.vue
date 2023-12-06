@@ -8,13 +8,33 @@
       </div>
       <button class="btn btn-primary" v-on:click="updateValue">Click Me~</button>
   </div>
+
+  <div>
+    <sj-button>
+      <template v-slot:hello>
+        <h1>hello</h1>
+      </template>
+
+      <template v-slot:sec="variable">
+        <h1>sec</h1>
+        <!--   하위 컴포넌트의, 변수사용     -->
+        <p>{{ variable.data }}</p>
+      </template>
+    </sj-button>
+  </div>
 </template>
 
 <script>
 import {ref} from "vue";
+import SjButton from "@/components/component/sj-button.vue";
 
 export default {
   name: "AlonePage",
+  components: {SjButton},
+  data() {
+    return {
+    }
+  },
   setup() {
 
     let inputVal = ref('');
