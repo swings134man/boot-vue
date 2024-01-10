@@ -13,6 +13,7 @@ import MapTestPage from "@/components/pages/MapTestPage";
 import DayJsMake from "@/components/pages/DayJsMake";
 import DataSortingTest from "@/components/pages/DataSortingTest";
 import CountDown from "@/components/pages/CountDown.vue";
+import ErrorTest from "@/components/pages/ErrorTest.vue";
 
 const routes = [ //path 별 component 추가
         {path: "/", name:'HomePage', component: HomePage},
@@ -31,6 +32,7 @@ const routes = [ //path 별 component 추가
         {path: '/dayJsTest', name:'DayJsTest', component: DayJsMake},
         {path: '/dataSorting', name:'DataSorting', component: DataSortingTest},
         {path: '/countDown', name:'CountDown', component: CountDown},
+        {path: '/errorTest', name:'ErrorTest', component: ErrorTest},
     ];
 
 const router = createRouter({
